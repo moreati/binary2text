@@ -68,7 +68,6 @@ str_encodings = [
     # http://user:pass@example.com:80/path/index.html;param=foo?q=bar
     ('URL quote',           urllib.parse.quote),
     ('URL quote plus',      urllib.parse.quote_plus),
-    ('URL quote',           urllib.parse.quote),
     ('XML escape',          xml.sax.saxutils.escape),
     ('XML quote attribute', xml.sax.saxutils.quoteattr),
     

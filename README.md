@@ -8,7 +8,6 @@ Encoding             Result                   Length inc
 HTML escape          Hello world!                      0
 URL quote            Hello%20world%21                  4
 URL quote plus       Hello+world%21                    2
-URL quote            Hello%20world%21                  4
 XML escape           Hello world!                      0
 XML quote attribute  "Hello world!"                    2
 reference            Hello world!                      0
