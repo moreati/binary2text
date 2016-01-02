@@ -25,7 +25,8 @@ import zmq.utils.z85
 #               https://en.wikipedia.org/wiki/PGP_word_list
 #
 data = 'Hello world!'
-fmtstr = '{0:<20} {1:<24} {2:>2}'
+headings = ('Encoding', 'Result', 'Length inc')
+fmtstr = '{0:<20} {1:<24} {2:>10}'
 
 def basin_encode(alphabet, n):
     """
@@ -87,6 +88,8 @@ byte_encodings = [
     ('base36',              base36_encode),
     ('base26',              base26_encode),
     ]
+
+print(fmtstr.format(*headings))
 
 for label, enc_func in str_encodings:
     data_enc = enc_func(data)
