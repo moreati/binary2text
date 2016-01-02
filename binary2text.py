@@ -7,6 +7,7 @@ import base64
 import html
 import quopri
 import string
+import sys
 import urllib.parse
 import xml.sax.saxutils
 
@@ -24,7 +25,7 @@ import zmq.utils.z85
 # PGP word list https://pypi.python.org/pypi/hex2words
 #               https://en.wikipedia.org/wiki/PGP_word_list
 #
-data = 'Hello world!'
+
 headings = ('Encoding', 'Result', 'Length inc')
 fmtstr = '{0:<20} {1:<24} {2:>10}'
 
@@ -88,6 +89,11 @@ byte_encodings = [
     ('base36',              base36_encode),
     ('base26',              base26_encode),
     ]
+
+if len(sys.argv) > 1:
+    data = sys.argv[1]
+else:
+    data = 'Hello World!'
 
 print(fmtstr.format(*headings))
 
