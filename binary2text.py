@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Experimenting with string escaping and byte string -> text encodings.
+"""
 
 import base64
 import html
