@@ -88,6 +88,10 @@ byte_encodings = [
     ('base26',              base26_encode),
     ]
 
+for label, enc_func in str_encodings:
+    data_enc = enc_func(data)
+    print(fmtstr.format(label, data_enc, len(data_enc) - len(data)))
+
 for label, enc_func in byte_encodings:
     data_utf8 = data.encode('utf-8')
     data_encb = enc_func(data_utf8)
